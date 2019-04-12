@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>光斑动画</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body{
+      height: 100%;
+    }
+    .wrap{
+      height: 100%;
+      background: black;
+      /* 使inline-block 居中 */
+      text-align: center;
+    }
+    h1 {
+      display: inline-block;
+      margin-top: 100px;
+      color: rgba(255, 255, 255,.3);
+      font-size: 80px;
+      /* 线性渐变,  */
+      background-image: linear-gradient(135deg,rgba(255,255,255,0) 60px,rgba(255,255,255,1) 180px,rgba(255,255,255,0) 260px);
+      background-repeat: no-repeat;
+      /* background-clip: content-box; */
+      /* 文字裁减  */
+      -webkit-background-clip: text ;
+
+    }
+
+    /* h1:hover{
+				background-position: 500px 0;
+			} */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+      <h1>我是光斑动画</h1>
+  </div>
+  
+</body>
+<script type="text/javascript">
+  let flag = -160;
+  let h = document.getElementsByTagName('h1')[0]
+  setInterval(() => {
+    flag+=10;
+    if(flag === 750) {
+      flag = -160
+    }
+    h.style.backgroundPosition = `${flag}px 0`
+  }, 30)
+</script>
+</html>
