@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>背景图片模糊</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .header{
+      position: relative;
+      height: 100px;
+      /* 图片底层背景透明度一半的黑色 */
+      background: rgba(0,0,0,.5)
+    }
+    img{
+      margin: 24px 0 0 24px;
+    }
+    .bg{
+      /* 开启决定定位占满header */
+      position:absolute;
+      top:0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      /* 设置背景图,不平铺,图片放大到header一样大 */
+      background: url('../img/avatar.jpg') no-repeat;
+      background-size: 100% 100%;
+      /* 层级向下 让半透明背景在上 */
+      z-index:-1;
+      /* 模糊 */
+      filter: blur(10px);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="../img/avatar.jpg" alt="图片" width="64" height="64">
+    <div class="bg"></div>
+  </div>
+</body>
+</html>
