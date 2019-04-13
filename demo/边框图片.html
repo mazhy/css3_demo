@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>边框图片</title>
+
+  <style  type="text/css">
+    #wrap {
+      position:absolute;
+      width: 200px;
+      height: 200px;
+      top:0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      /* 边框图片 必须要有边框  */
+      border:10px solid; 
+      border-image-source: url('../img/border-image.png');
+      border-image-repeat:round;
+      border-image-slice: 33.33%;
+      border-image-width: 20px;
+      border-image-outset: 10px;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+
+
+  </div>
+</body>
+</html>
