@@ -52,7 +52,11 @@
 	-	flex-basis：伸缩规则计算的基准值（默认拿width或height的值）
 	
 ###	伸缩规则
-+	flex-basis（默认值为auto）
++	flex-basis: 设置项目的初始长度
+  - number	一个长度单位或者一个百分比，规定灵活项目的初始长度。
+  - auto	默认值。长度等于灵活项目的长度。如果该项目未指定长度，则长度将根据内容决定。
+  - initial	设置该属性为它的默认值。请参阅 initial。
+  - inherit	从父元素继承该属性。请参阅 inherit。
 +	flex-grow（默认值为0）
 	-	可用空间 = (容器大小 - 所有相邻项目flex-basis的总和)
 	-	可扩展空间 = (可用空间/所有相邻项目flex-grow的总和)

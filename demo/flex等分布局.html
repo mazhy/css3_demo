@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex等分布局</title>
+  <style type="text/css">
+    *{
+      margin:0;
+      padding: 0;
+    }
+    #wrap {
+      width: 400px;
+      height: 400px;
+      border: 1px solid;
+      margin: 100px auto;
+      display: flex;
+    }
+    #wrap > .item{
+      background: pink;
+      height:50px;
+      line-height: 50px;
+      text-align: center;
+      /* 初始化长度 */
+      flex-basis: 0;
+      /* 以0的基础上平均分 */
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="item">1</div>
+    <div class="item">22</div>
+    <div class="item">333</div>
+    <div class="item">4444</div>
+    <div class="item">55555</div>
+  </div>
+</body>
+</html>
